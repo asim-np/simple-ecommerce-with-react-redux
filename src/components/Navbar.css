@@ -1,0 +1,155 @@
+.nav-container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-image: linear-gradient(to bottom, #cccccc, #ffffff);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: space-between;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0 5rem;
+}
+
+.search {
+    width: 50%;
+    border-radius: 2rem;
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: flex-start; 
+    gap: 3rem;
+}
+
+.menu-link {
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+
+.menu-btn {
+    position: relative;
+    text-decoration: none;
+    font-weight: bold;
+    gap: 2rem;
+}
+
+.cart {
+    position: relative;
+}
+
+.menu-icon {
+    display: none;
+}
+
+span {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff0000;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 4px;
+    border-radius: 50%;
+}
+
+.category-container {
+    position: relative;
+    display: inline-block;
+}
+
+.category-button {
+    font-size: medium;
+    color: rgb(34, 56, 128);
+    font-weight: bold;
+    background: none;
+}
+
+
+.category-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+    width: max-content;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    gap: 1rem;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.category-link {
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+}
+
+.open {
+    display: block;
+}
+
+#check {
+    display: none;
+}
+
+
+@media (max-width: 820px) {
+    .nav-items {
+        position: fixed;
+        flex-direction: column;
+        background-image: linear-gradient(to bottom, #ffffff, #cccccc);
+        color: #fff;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+        padding-top: 2rem;
+        transition: all 0.3s ease;
+    }
+
+    .menu-link:hover {
+        transform: translateX(0.5rem);
+    }
+
+    .search-bar {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 20px;
+         
+    }
+
+    #check:checked ~ .nav-items {
+        left: 0;
+    }
+}
